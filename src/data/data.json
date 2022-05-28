@@ -1,0 +1,68 @@
+{
+  "Header": {
+    "title": "Remonty-Nowak",
+    "paragraph": "Usługi budowlane, wykończenia, remonty"
+  },
+  "About": {
+    "paragraph": "Jeżeli szukasz rzetelnej firmy do przeprowadzenia remontu, bądz zlecić pracę wykończeniowe, to trafiłeś w dobre miejsce! Po uzgodnieniu telefonicznie lub poprzez formularz kontaktowy zakresu prac oraz terminu, na miejscu zjawi się fachowiec który wyceni indywidualnie kosztorys prac. Nie musisz przejmować się zakupem materiałów na budowę, sami dobierzemy odpowiednie materiały oraz dostarczymy je na miejsce pracy (w przypadku transportu wiekszych gabarytów jak płyty GK możliwe będzie naliczenie dodatkowych opłat związanych z transportem). Nie prowadzimy wywozu odpadu takiego jak gruz budowlany czy ziemia.",
+    "Why": [
+      "Doświadczenie",
+      "Tempor incididunt",
+      "Lorem ipsum dolor",
+      "Incididunt ut labore"
+    ],
+    "Why2": [
+      "Fachowa wiedza",
+      "Lorem ipsum dolor",
+      "Exercitation ullamco",
+      "Lorem ipsum dolor"
+    ]
+  },
+
+  "Services": [
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Ściany i stelaże",
+      "text": "Podwieszanie sufitów, montaż konstrukcji z profili stalowych czy montaż płyt gipsowo-kartonowych."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Dowóz materiału",
+      "text": "Zapewniamy dowóz materiału potrzebnego do przeprowadzenia prac."
+    }
+  ],
+
+  "Contact": {
+    "name": "Daniel Nowak",
+    "companyNIP": "NIP: 5532570083",
+    "comapnyREGON": "REGON: 388382742",
+    "address": "Pietrzykowice",
+    "phone": "+48512700684",
+    "email": "kontakt@remonty-nowak.pl",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Usługi remontowe",
+      "text": "Prowadzimy prace związane z wykończeniami wnętrz. "
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Usługi budowlane",
+      "text": "Prowadzimy prace związane z budową, np. ścian działowych z płyt GK."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Usługi stolarskie",
+      "text": "Prace związane z wymianą drzwi i okien oraz montaż nowej stolarki okiennej jak i drzwi wewnętrznych czy zewnętrznych."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Usługi dekarskie",
+      "text": "Zajmujemy się również pokryciami poszyć dachowych."
+    }
+  ]
+}
