@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
-import { Features } from "./components/features";
+import Main from "./components/main";
 import { About } from "./components/about";
-import { Services } from "./components/services";
-import { Gallery } from "./components/gallery";
-import { Contact } from "./components/contact";
+import Footer from "./components/footer";
+import { Routes, Route } from "react-router-dom";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import CookieConsent from "react-cookie-consent";
@@ -42,12 +40,14 @@ const App = () => {
         Strona używa plików cookie w celu zbierania danych analitycznych.
       </CookieConsent>
       <Navigation />
-      <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Gallery data={landingPageData.Gallery} />
-      <Contact data={landingPageData.Contact} />
+      <Routes>
+        <Route path="/" index element={<Main data={landingPageData} />} />
+        <Route
+          path="realizacje:id"
+          element={<About data={landingPageData.About} />}
+        />
+      </Routes>
+      <Footer />
     </div>
   );
 };

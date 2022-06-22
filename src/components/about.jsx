@@ -3,7 +3,7 @@ import { opacityAnimation } from "../Framer-motion/framer";
 
 export const About = (props) => {
   return (
-    <div id="about">
+    <div id="informacje">
       <AnimatePresence>
         <motion.div
           className="container"

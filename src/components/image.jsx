@@ -7,12 +7,13 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-import { useState,  useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { db } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
-export const Image = ({ title, description, thumbnail, gallery }) => {
+export const Image = ({ title, description, thumbnail, gallery, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [imageGallery, setImageGallery] = useState([]);
@@ -55,6 +56,9 @@ export const Image = ({ title, description, thumbnail, gallery }) => {
         </CardContent>
         <CardActions>
           <Button onClick={() => setIsOpen(true)}>Galeria</Button>
+          <Button>
+            <Link to={`realizacje:${id}`}>Link</Link>
+          </Button>
         </CardActions>
       </Card>
 

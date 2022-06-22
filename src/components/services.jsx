@@ -8,7 +8,7 @@ import { FiTruck } from "react-icons/fi";
 
 export const Services = (props) => {
   return (
-    <div id="services" className="text-center">
+    <div id="uslugi" className="text-center">
       <AnimatePresence>
         <motion.div
           className="container"

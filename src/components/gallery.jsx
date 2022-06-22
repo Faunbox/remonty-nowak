@@ -11,7 +11,9 @@ export const Gallery = () => {
 
   const getData = async () => {
     const data = await getDocs(collection(db, collectionName));
-    data.forEach((doc) => setGallery([...gallery, doc.data()]));
+    data.forEach((doc) =>
+      setGallery((prevState) => [...prevState, doc.data()])
+    );
   };
 
   useEffect(() => {
@@ -28,25 +30,28 @@ export const Gallery = () => {
         <div className="row">
           <div className="portfolio-items">
             <AnimatePresence>
-              {gallery
-                ? gallery.map((data, index) => (
-                    <motion.div
-                      key={`${data.title}-${index}`}
-                      className="col-sm-6 col-md-4 col-lg-4"
-                      variants={opacityAnimation}
-                      initial={opacityAnimation.initial}
-                      whileInView={opacityAnimation.whileInView}
-                      transition={opacityAnimation.transition}
-                    >
-                      <Image
-                        title={data.title}
-                        gallery={data.gallery}
-                        thumbnail={data.thumbnail}
-                        description={data.description}
-                      />
-                    </motion.div>
-                  ))
-                : "Loading..."}
+              {gallery.length > 0 ? (
+                gallery?.map((data) => (
+                  <motion.div
+                    key={`${data.id}`}
+                    className="col-sm-6 col-md-4 col-lg-4"
+                    variants={opacityAnimation}
+                    initial={opacityAnimation.initial}
+                    whileInView={opacityAnimation.whileInView}
+                    transition={opacityAnimation.transition}
+                  >
+                    <Image
+                      title={data.title}
+                      gallery={data.gallery}
+                      thumbnail={data.thumbnail}
+                      description={data.description}
+                      id={data.id}
+                    />
+                  </motion.div>
+                ))
+              ) : (
+                <p>Loading...</p>
+              )}
             </AnimatePresence>
           </div>
         </div>

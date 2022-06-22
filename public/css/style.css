@@ -261,19 +261,19 @@ header .intro-text {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* About Section */
-#about {
+#informacje {
   padding: 100px 0;
 }
-#about h3 {
+#informacje h3 {
   font-size: 22px;
   margin: 0 0 20px;
 }
-#about h2 {
+#informacje h2 {
   position: relative;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-#about h2::after {
+#informacje h2::after {
   position: absolute;
   content: "";
   background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
@@ -282,13 +282,13 @@ header .intro-text {
   bottom: 0;
   left: 0;
 }
-#about .about-text li {
+#informacje .about-text li {
   margin-bottom: 6px;
   margin-left: 6px;
   list-style: none;
   padding: 0;
 }
-#about .about-text li:before {
+#informacje .about-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
   color: #5ca9fb;
@@ -296,30 +296,30 @@ header .intro-text {
   font-weight: 300;
   padding-right: 8px;
 }
-#about img {
+#informacje img {
   width: 520px;
   margin-top: 10px;
   background: #fff;
   border-right: 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
 }
-#about p {
+#informacje p {
   line-height: 24px;
   margin: 30px 0;
 }
 /* Services Section */
-#services {
+#uslugi {
   padding: 100px 0;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: #fff;
 }
-#services .service-desc {
+#uslugi .service-desc {
   margin: 10px 10px 20px;
 }
-#services h2 {
+#uslugi h2 {
   color: #fff;
 }
-#services .section-title h2::after {
+#uslugi .section-title h2::after {
   position: absolute;
   content: "";
   background: rgba(255, 255, 255, 0.3);
@@ -329,7 +329,7 @@ header .intro-text {
   margin-left: -30px;
   left: 50%;
 }
-#services i.fa {
+#uslugi i.fa {
   font-size: 42px;
   width: 120px;
   height: 120px;
@@ -339,15 +339,15 @@ header .intro-text {
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
-#services h3 {
+#uslugi h3 {
   font-weight: 500;
   padding: 5px 0;
   color: #fff;
 }
-#services p {
+#uslugi p {
   color: rgba(255, 255, 255, 0.75);
 }
-#services .service-desc {
+#uslugi .service-desc {
   margin-bottom: 40px;
 }
 /* Portfolio Section */
@@ -461,24 +461,24 @@ header .intro-text {
   color: #888;
 }
 /* Contact Section */
-#contact {
+#kontakt {
   padding: 100px 0 60px;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: rgba(255, 255, 255, 0.75);
 }
-#contact .section-title {
+#kontakt .section-title {
   margin-bottom: 40px;
 }
-#contact .section-title p {
+#kontakt .section-title p {
   font-size: 16px;
 }
-#contact h2 {
+#kontakt h2 {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-#contact .section-title h2::after {
+#kontakt .section-title h2::after {
   position: absolute;
   content: "";
   background: rgba(255, 255, 255, 0.3);
@@ -487,26 +487,26 @@ header .intro-text {
   bottom: 0;
   left: 30px;
 }
-#contact h3 {
+#kontakt h3 {
   color: #fff;
   margin-top: 80px;
   margin-bottom: 25px;
   padding-bottom: 20px;
   font-weight: 400;
 }
-#contact form {
+#kontakt form {
   padding-top: 20px;
 }
-#contact .text-danger {
+#kontakt .text-danger {
   color: #cc0033;
   text-align: left;
 }
-#contact .btn-custom {
+#kontakt .btn-custom {
   margin: 30px 0;
   background: transparent;
   border: 2px solid #fff;
 }
-#contact .btn-custom:hover {
+#kontakt .btn-custom:hover {
   color: #1f386e;
   background: #fff;
 }
@@ -516,7 +516,7 @@ label {
   font-family: "Open Sans", sans-serif;
   float: left;
 }
-#contact .form-control {
+#kontakt .form-control {
   display: block;
   width: 100%;
   padding: 6px 12px;
@@ -533,7 +533,7 @@ label {
   -o-transition: none;
   transition: none;
 }
-#contact .form-control:focus {
+#kontakt .form-control:focus {
   border-color: #999;
   outline: 0;
   -webkit-box-shadow: transparent;
@@ -551,28 +551,28 @@ label {
 .form-control:-ms-input-placeholder {
   color: #777;
 }
-#contact .contact-item {
+#kontakt .contact-item {
   margin: 20px 0;
 }
-#contact .contact-item span {
+#kontakt .contact-item span {
   color: rgba(255, 255, 255, 1);
   margin-bottom: 10px;
   display: block;
 }
-#contact .contact-item i.fa {
+#kontakt .contact-item i.fa {
   margin-right: 10px;
 }
-#contact .social {
+#kontakt .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
 }
-#contact .social ul li {
+#kontakt .social ul li {
   display: inline-block;
   margin: 0 20px;
 }
-#contact .social i.fa {
+#kontakt .social i.fa {
   font-size: 22px;
   width: 48px;
   height: 48px;
@@ -582,7 +582,7 @@ label {
   border-radius: 50%;
   transition: all 0.3s;
 }
-#contact .social i.fa:hover {
+#kontakt .social i.fa:hover {
   color: #608dfd;
   background: #fff;
 }

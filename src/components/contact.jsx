@@ -5,7 +5,7 @@ export const Contact = (props) => {
   return (
     <div>
       <AnimatePresence>
-        <div id="contact">
+        <div id="kontakt">
           <motion.div
             className="container"
             variants={opacityAnimation}
@@ -99,7 +99,7 @@ export const Contact = (props) => {
                       >
                         <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
                       </svg>{" "}
-                      Dane firmy:
+                      <b>Dane firmy:</b>
                     </span>{" "}
                     {props.data ? <p>{props.data.name}</p> : "loading"}
                     {props.data ? <p>{props.data.companyNIP}</p> : "loading"}
@@ -108,7 +108,7 @@ export const Contact = (props) => {
                 </div>
                 <p>
                   <span>
-                    <i className="fa fa-map-marker"></i> Address
+                    <i className="fa fa-map-marker"></i> <b>Adres: </b>
                   </span>
                   {props.data ? props.data.address : "loading"}
                 </p>
@@ -116,7 +116,7 @@ export const Contact = (props) => {
               <div className="contact-item">
                 <p>
                   <span>
-                    <i className="fa fa-phone"></i> Phone
+                    <i className="fa fa-phone"></i> <b>Telefon:</b>
                   </span>{" "}
                   {props.data ? props.data.phone : "loading"}
                 </p>
@@ -124,7 +124,7 @@ export const Contact = (props) => {
               <div className="contact-item">
                 <p>
                   <span>
-                    <i className="fa fa-envelope-o"></i> Email
+                    <i className="fa fa-envelope-o"></i> <b>Email:</b>
                   </span>{" "}
                   {props.data ? props.data.email : "loading"}
                 </p>
@@ -136,7 +136,11 @@ export const Contact = (props) => {
                   <p>Zapraszamy na naszego Facebooka!</p>
                   <ul>
                     <li>
-                      <a href={props.data ? props.data.facebook : "/"}>
+                      <a
+                        target="blank"
+                        rel="noreferrer"
+                        href={props.data ? props.data.facebook : "/"}
+                      >
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
@@ -155,16 +159,6 @@ export const Contact = (props) => {
               </div>
             </div>
           </motion.div>
-        </div>
-        <div id="footer">
-          <div className="container text-center">
-            <p>
-              &copy; 2022 Remonty-Nowak. Design by{" "}
-              <a href="https://www.google.pl" rel="nofollow">
-                Filip Sojecki
-              </a>
-            </p>
-          </div>
         </div>
       </AnimatePresence>
     </div>
