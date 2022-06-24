@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation";
 import Main from "./components/main";
-import { About } from "./components/about";
 import Footer from "./components/footer";
+import Test from "./components/test";
 import { Routes, Route } from "react-router-dom";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/" index element={<Main data={landingPageData} />} />
         <Route
           path="realizacje:id"
-          element={<About data={landingPageData.About} />}
+          element={<Test />}
         />
       </Routes>
       <Footer />
