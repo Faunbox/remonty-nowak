@@ -355,7 +355,6 @@ header .intro-text {
   padding: 100px 0;
 }
 .portfolio-item {
-  margin: 1px -15px 0 -14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -602,14 +601,67 @@ label {
   border-bottom: 2px solid #608dfd;
 }
 
+.galleryItems {
+  place-items: center;
+}
+
+/* Test */
+#test {
+  min-height: 100vh;
+  padding: 100px 0 20px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  text-align: center;
+  color: black;
+}
+
+#text h1 {
+  color: black;
+}
+
+#test .test-description {
+  padding: 30px 0;
+}
+
+#test .test-gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+}
+
+#test .test-gallery-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#test .test-gallery-item {
+  width: 350px;
+  height: auto;
+  padding: 10px;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
+  }
+
+  #test .test-gallery-item {
+    width: 300px;
   }
 }
 
 @media screen and (max-width: 450px) {
   #menu a.navbar-brand {
     font-size: 20px;
+  }
+
+  #test .test-gallery-item {
+    width: 200px;
   }
 }

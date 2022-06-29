@@ -29,35 +29,33 @@ export const Gallery = () => {
           <h2>Nasze realizacje</h2>
           <p>Galeria zdjęć wraz z opisem wykonanych prac</p>
         </div>
-        <div className="row">
-          <div className="portfolio-items">
-            <AnimatePresence>
-              {gallery.length > 0 ? (
-                gallery?.map((data) => (
-                  <>
-                    <motion.div
-                      className="col-sm-6 col-md-4 col-lg-4"
-                      key={data.id}
-                      variants={opacityAnimation}
-                      initial={opacityAnimation.initial}
-                      whileInView={opacityAnimation.whileInView}
-                      transition={opacityAnimation.transition}
-                    >
-                      <Image
-                        title={data.title}
-                        gallery={data.gallery}
-                        thumbnail={data.thumbnail}
-                        description={data.description}
-                        id={data.id}
-                      />
-                    </motion.div>
-                  </>
-                ))
-              ) : (
-                <p>Loading...</p>
-              )}
-            </AnimatePresence>
-          </div>
+        <div className="portfolio-items">
+          <AnimatePresence>
+            {gallery.length > 0 ? (
+              gallery?.map((data) => (
+                <>
+                  <motion.div
+                    className="col-sm-6 col-md-4 col-lg-4"
+                    key={data.id}
+                    variants={opacityAnimation}
+                    initial={opacityAnimation.initial}
+                    whileInView={opacityAnimation.whileInView}
+                    transition={opacityAnimation.transition}
+                  >
+                    <Image
+                      title={data.title}
+                      gallery={data.gallery}
+                      thumbnail={data.thumbnail}
+                      description={data.shortDesc}
+                      id={data.id}
+                    />
+                  </motion.div>
+                </>
+              ))
+            ) : (
+              <p>Loading...</p>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>
