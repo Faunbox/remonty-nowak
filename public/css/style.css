@@ -74,6 +74,7 @@ hr {
 #menu {
   padding: 15px;
   transition: all 0.8s;
+  z-index: 1;
 }
 #menu.navbar-default {
   background-color: #fff;
@@ -354,11 +355,17 @@ header .intro-text {
 #portfolio {
   padding: 100px 0;
 }
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .portfolio-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
 }
 .portfolio-item .hover-bg {
   overflow: hidden;
@@ -639,19 +646,28 @@ label {
   justify-content: space-around;
 }
 
-#test .test-gallery-item {
+#test img {
   width: 350px;
   height: auto;
   padding: 10px;
   object-fit: cover;
+  transition: 0.5s ease;
 }
+
+.ril__toolbar {
+  top: 81px;
+}
+
+/* #test .test-gallery-item:hover {
+  transform: scale(1.1);
+} */
 
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
   }
 
-  #test .test-gallery-item {
+  #test img {
     width: 300px;
   }
 }
@@ -661,7 +677,7 @@ label {
     font-size: 20px;
   }
 
-  #test .test-gallery-item {
+  #test img {
     width: 200px;
   }
 }

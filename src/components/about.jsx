@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { opacityAnimation } from "../Framer-motion/framer";
 
 export const About = (props) => {
@@ -15,10 +16,10 @@ export const About = (props) => {
           <div className="row">
             <div className="col-xs-12 col-md-6">
               {" "}
-              <img
+              <LazyLoadImage
                 src="img/about.jpg"
                 className="img-responsive"
-                alt="partacz"
+                alt="remonty nowak"
                 loading="lazy"
               />{" "}
             </div>

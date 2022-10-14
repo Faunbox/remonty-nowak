@@ -11,6 +11,7 @@ import CookieConsent from "react-cookie-consent";
 import "bootstrap/js/dist/collapse";
 import "bootstrap/js/dist/dom/event-handler";
 import "./App.css";
+import { Helmet } from "react-helmet-async";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1200,
@@ -25,6 +26,17 @@ const App = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta
+          name="keywords"
+          content="remont żywiec, remont zywiec, uslugi budowlane zywiec, malowanie scian zywiec, remonty, usługi budowlane żywiec"
+        />
+        <meta
+          name="description"
+          content="Usługa budowlana wykonana przez firmę Remonty Nowak"
+        />
+        <title>Remonty Nowak</title>
+      </Helmet>
       <CookieConsent
         location="bottom"
         buttonText="Wyrażam zgodę"

@@ -1,11 +1,10 @@
-import { db, storage } from "../firebase/firebase";
+import { db } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 import Lightbox from "react-image-lightbox";
+import { Helmet } from "react-helmet-async";
 
 const Test = () => {
   const [data, setData] = useState();
@@ -50,49 +49,66 @@ const Test = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+        <meta
+          name="keywords"
+          content="remont żywiec, remont zywiec, uslugi budowlane zywiec, malowanie scian zywiec, remonty, usługi budowlane żywiec"
+        />
+        <meta
+          name="description"
+          content="Usługa budowlana wykonana przez firmę Remonty Nowak"
+        />
+        <title>Remonty Nowak - {data?.title}</title>
+      </Helmet>
     <div id="test">
-      <h1>{data?.title}</h1>
       <div className="container">
+      <div className="section-title">
+        <h2>{data?.title}</h2>
+      </div>
         {data ? (
           <p className="test-description">{data.longDesc}</p>
         ) : (
           <p>Loading...</p>
         )}
-        <div className="test-gallery">
-          <h4>Galeria zdjęć</h4>
-          <div className="test-gallery-image-wrapper">
-            {gallery.map((image, index) => (
-              <div key={image} onClick={() => setIsOpen(true)}>
-                <img
-                  {...srcset(image, 400)}
-                  alt={image.title}
-                  onClick={() => setPhotoIndex(index)}
-                  loading="lazy"
-                  className="test-gallery-item"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-        {isOpen && (
-          <Lightbox
-            mainSrc={gallery[photoIndex]}
-            nextSrc={gallery[(photoIndex + 1) % gallery.length]}
-            prevSrc={
-              gallery[(photoIndex + gallery.length - 1) % gallery.length]
-            }
-            onCloseRequest={() => setIsOpen(false)}
-            onMovePrevRequest={() =>
-              setPhotoIndex((photoIndex + gallery.length - 1) % gallery.length)
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % gallery.length)
-            }
-            // clickOutsideToClose={true}
-          />
-        )}
       </div>
+      <div className="test-gallery">
+        <div className="section-title">
+          <h2 style={{ color: "white" }}>Galeria zdjęć</h2>
+        </div>
+        <div className="test-gallery-image-wrapper container">
+          {gallery.map((image, index) => (
+            <div key={image} onClick={() => setIsOpen(true)}>
+              <img
+                {...srcset(image, 400)}
+                alt={image.title}
+                onClick={() => setPhotoIndex(index)}
+                loading="lazy"
+                className="test-gallery-item"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      {isOpen && (
+        <Lightbox
+          mainSrc={gallery[photoIndex]}
+          nextSrc={gallery[(photoIndex + 1) % gallery.length]}
+          prevSrc={gallery[(photoIndex + gallery.length - 1) % gallery.length]}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + gallery.length - 1) % gallery.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % gallery.length)
+          }
+          enableZoom={true}
+          wrapperClassName="test"
+          // clickOutsideToClose={true}
+        />
+      )}
     </div>
+    </>
   );
 };
 

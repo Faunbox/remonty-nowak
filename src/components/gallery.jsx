@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
 import { Image } from "./image";
 import { db } from "../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { AnimatePresence, motion } from "framer-motion";
 import { opacityAnimation } from "../Framer-motion/framer";
-import Test from "./test";
 
 export const Gallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -33,9 +31,9 @@ export const Gallery = () => {
           <AnimatePresence>
             {gallery.length > 0 ? (
               gallery?.map((data) => (
-                <>
+                <div key={data.id}>
                   <motion.div
-                    className="col-sm-6 col-md-4 col-lg-4"
+                    className=""
                     key={data.id}
                     variants={opacityAnimation}
                     initial={opacityAnimation.initial}
@@ -50,7 +48,7 @@ export const Gallery = () => {
                       id={data.id}
                     />
                   </motion.div>
-                </>
+                </div>
               ))
             ) : (
               <p>Loading...</p>

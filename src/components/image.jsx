@@ -57,7 +57,7 @@ export const Image = ({ title, description, thumbnail, gallery, id }) => {
         <CardActions>
           <Button onClick={() => setIsOpen(true)}>Galeria</Button>
           <Button>
-            <Link to={`/realizacje:${id}`}>Link</Link>
+            <Link to={`/realizacje:${id}`}>Czytaj wiecej</Link>
           </Button>
         </CardActions>
       </Card>
