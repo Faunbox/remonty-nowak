@@ -87,6 +87,8 @@ hr {
   font-weight: 700;
   color: #333;
   text-transform: uppercase;
+  background: url("./public/img/logo.svg");
+  background-size: 100px 82px;
 }
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
